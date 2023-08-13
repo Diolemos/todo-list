@@ -2,4 +2,13 @@
 
 <h1>Todo's</h1>
 
+<% if( locals.todos) {%>
+<ul>
+    <% locals.todos.forEach((todo,index )=> { %>
+        <li><%= todo.task %></li>
+        <% }); %> %>
+</ul>
+<% }else{ %>
+    <p>List is empty</p>
+    <% } %>
 <%- include('partials/footer.ejs') %>
