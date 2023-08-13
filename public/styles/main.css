@@ -2,3 +2,9 @@ body{
     background-color: rgb(22, 22, 22);
     color: #f7f7f7;
 }
+.todo{
+    cursor: pointer;
+}
+.checked{
+    text-decoration: line-through;
+}

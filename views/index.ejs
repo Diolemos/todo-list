@@ -5,7 +5,7 @@
 <% if( locals.todos) {%>
 <ul>
     <% locals.todos.forEach((todo,index )=> { %>
-        <li><%= todo.task %></li>
+        <li id="<%= index %>" class="todo"><%= todo.task %> </li>
         <% }); %> %>
 </ul>
 <% }else{ %>
