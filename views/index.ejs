@@ -11,4 +11,9 @@
 <% }else{ %>
     <p>List is empty</p>
     <% } %>
+
+    <form action="/submit" method="POST">
+        <input type="text" name="newTodo" id="todo" min="3" placeholder="Do the dishes..."/>
+        <input type="submit" value="Add todo"/>
+    </form>
 <%- include('partials/footer.ejs') %>

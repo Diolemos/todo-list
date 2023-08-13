@@ -11,10 +11,20 @@ app.get("/",(req,res)=>{
     res.render("index.ejs",{todos})
 })
 
+app.post("/submit",(req,res)=>{
+   let newTodo = {
+        task: req.body["newTodo"],
+        creationDate: new Date(),
+        isCompleted: false
+    }
+    todos.push(newTodo)
+    res.redirect("/")
+})
 
 app.listen(port, ()=>{
  console.log('listening on port '+port)
 })
+
 
 
 let todos = [
